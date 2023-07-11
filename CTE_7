@@ -1,0 +1,12 @@
+# Query 'Top Customers'
+
+SELECT A.first_name, E.city, F.country,		
+SUM(C.amount)		
+FROM customer A		
+INNER JOIN rental B ON A.customer_id = B.customer_id		
+INNER JOIN payment C ON B.rental_id = C.rental_id		
+INNER JOIN address D ON A.address_id = D.address_id		
+INNER JOIN city E ON D.city_id = E.city_id		
+INNER JOIN country F ON E.country_id = F.country_id		
+GROUP BY first_name, city, country		
+ORDER BY SUM(C.amount) DESC		
