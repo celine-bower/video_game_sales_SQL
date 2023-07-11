@@ -1,4 +1,4 @@
-# Query with Inner Join
+# Query 'Top 10 Countries by Customer Count'
 
 SELECT D.country,					
 	COUNT(customer_id) AS number_of_customers				
