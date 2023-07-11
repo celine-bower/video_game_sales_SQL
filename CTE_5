@@ -1,4 +1,4 @@
-# Query with Inner Join:
+# Query 'Top 5 Customers With Location'
 
 
 SELECT A.customer_id, A.first_name AS customer_first_name, 		
